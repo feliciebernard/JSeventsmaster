@@ -50,12 +50,16 @@ secondEdit.addEventListener('click', onSecondCard);
 
 //fonctionalité 5
 
-document.getElementsByClassName("navbar")[0].addEventListener("click", function(){
-  if (document.getElementsByTagName("link")[0].rel == "stylesheet")           //if stylesheet is on, we turn it off
-    document.getElementsByTagName("link")[0].rel = "styleDisabled";
+let navbarMain = document.getElementsByClassName('navbar')[0];
+
+let onNavbarMain = function() {
+  if (document.getElementsByTagName("link")[0].rel == "stylesheet")
+    document.getElementsByTagName("link")[0].rel = "";
   else
-    document.getElementsByTagName("link")[0].rel = "stylesheet";
-});;
+    document.getElementsByTagName("link")[0].rel = "stylesheet"; 
+}
+
+navbarMain.addEventListener('click', onNavbarMain);
 
 //fonctionalité 6
 
