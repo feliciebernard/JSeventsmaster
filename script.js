@@ -63,6 +63,31 @@ navbarMain.addEventListener('click', onNavbarMain);
 
 //fonctionalité 6
 
+let viewButton = document.getElementsByClassName("btn btn-sm btn-success");
+for(let f = 0; f < viewButton.length; f++){
+
+let textCards = document.getElementsByClassName("card-text")[f];
+let imageCards = document.getElementsByClassName("card-img-top")[f];
+
+
+
+let onAllCards = function() {
+  if (textCards.style.fontSize === '1em') {
+textCards.style.fontSize = '0em' ;
+} else {
+textCards.style.fontSize = '1em' ;
+}
+
+if (imageCards.style.width === '100%') {
+imageCards.style.width = '20%' ;
+} else {
+imageCards.style.width = '100%' ;
+}
+
+}
+viewButton[f].addEventListener('mouseover', onAllCards);
+}
+
 //fonctionalité 7
 
 //fonctionalité 8
